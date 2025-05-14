@@ -20,7 +20,6 @@ A web-based maze runner game where you navigate through a randomly generated maz
 - 🧩 Randomly generated maze for each game
 - 👾 Multiple enemies with different movement patterns
 - 🎁 Two types of powerups
-- 📱 Mobile-friendly controls
 - 🖥️ Responsive design
 
 ## 🛠️ Implementation Details
