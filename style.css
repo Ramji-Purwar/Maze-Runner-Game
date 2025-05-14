@@ -1,0 +1,200 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.game-container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: row; /* Horizontal layout for PC */
+    align-items: flex-start;
+    gap: 20px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Left Panel - Info and Instructions */
+.left-panel {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Right Panel - Game Canvas */
+.right-panel {
+    width: 70%;
+}
+
+/* Game Canvas */
+#gameCanvas {
+    width: 100%;
+    height: 600px;
+    background-color: white;
+    border: 2px solid #333;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Game Info and Powerups */
+.game-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.powerups {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#invisibility-count, #teleport-count {
+    font-weight: bold;
+    padding: 8px 10px;
+    border-radius: 5px;
+}
+
+#invisibility-count {
+    background-color: #e6ccff;
+    border: 1px solid #a020f0;
+}
+
+#teleport-count {
+    background-color: #ffe0b3;
+    border: 1px solid #ffa500;
+}
+
+#resetButton {
+    padding: 10px 15px;
+    background-color: #ff6666;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#resetButton:hover {
+    background-color: #ff4d4d;
+}
+
+/* Instructions */
+.instructions {
+    padding: 15px;
+    background-color: white;
+    border-radius: 5px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.instructions h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.instructions ul {
+    padding-left: 20px;
+}
+
+.instructions li {
+    margin-bottom: 8px;
+}
+
+/* Mobile Controls - Hidden on PC */
+.mobile-controls {
+    display: none; /* Hidden by default on PC */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .game-container {
+        flex-direction: column; /* Switch to vertical layout on mobile */
+    }
+    
+    .left-panel, .right-panel {
+        width: 100%;
+    }
+    
+    #gameCanvas {
+        height: 400px;
+    }
+    
+    /* Show mobile controls on smaller screens */
+    .mobile-controls {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    
+    .direction-controls {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .middle-row {
+        display: flex;
+        gap: 50px;
+        margin: 10px 0;
+    }
+    
+    .powerup-controls {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .mobile-controls button {
+        width: 60px;
+        height: 60px;
+        font-size: 20px;
+        border-radius: 10px;
+        border: 2px solid #333;
+        background-color: #e6e6e6;
+        cursor: pointer;
+    }
+    
+    .mobile-controls button:active {
+        background-color: #cccccc;
+    }
+    
+    #upButton, #downButton, #leftButton, #rightButton {
+        background-color: #d9f2d9;
+    }
+    
+    #aButton {
+        background-color: #e6ccff;
+    }
+    
+    #sButton {
+        background-color: #ffe0b3;
+    }
+    
+    /* Additional mobile adjustments */
+    @media (max-width: 600px) {
+        .mobile-controls {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .powerup-controls {
+            flex-direction: row;
+            gap: 30px;
+        }
+    }
+}

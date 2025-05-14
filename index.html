@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze Runner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="left-panel">
+            <h1>Maze Runner</h1>
+            
+            <div class="game-info">
+                <div class="powerups">
+                    <div id="invisibility-count">Invisibility: 0 (A key)</div>
+                    <div id="teleport-count">Teleport: 0 (S key)</div>
+                </div>
+                <button id="resetButton">Reset (R)</button>
+            </div>
+            
+            <div class="instructions">
+                <h2>Instructions:</h2>
+                <p>Use arrow keys to move. Collect powerups to help you escape the maze!</p>
+                <ul>
+                    <li>🟣 Invisibility (A key): Be invisible to enemies for 5 seconds</li>
+                    <li>🟠 Teleport (S key): Teleport ypu to other position</li>
+                    <li>🟢 Goal: Reach the green circle to win</li>
+                    <li>🔵 Enemies: Avoid the blue circles</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="right-panel">
+            <canvas id="gameCanvas"></canvas>
+        </div>
+        
+        <!-- Mobile controls will only show on small screens -->
+        <div class="mobile-controls">
+            <div class="direction-controls">
+                <button id="upButton">↑</button>
+                <div class="middle-row">
+                    <button id="leftButton">←</button>
+                    <button id="rightButton">→</button>
+                </div>
+                <button id="downButton">↓</button>
+            </div>
+            
+            <div class="powerup-controls">
+                <button id="aButton">A<br>(Invisibility)</button>
+                <button id="sButton">S<br>(Teleport)</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="maze.js"></script>
+</body>
+</html>
